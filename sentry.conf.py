@@ -305,11 +305,12 @@ if 'BITBUCKET_CONSUMER_KEY' in os.environ:
     BITBUCKET_CONSUMER_KEY = env('BITBUCKET_CONSUMER_KEY')
     BITBUCKET_CONSUMER_SECRET = env('BITBUCKET_CONSUMER_SECRET')
 
-if 'SENTRY_SSO' in os.environ:
-    SENTRY_FEATURES['organizations:sso'] = True
-
-if 'GOOGLE_CLIENT_ID' in os.environ:
-    GOOGLE_CLIENT_ID = env('GOOGLE_CLIENT_ID')
-
-if 'GOOGLE_CLIENT_SECRET' in os.environ:
-    GOOGLE_CLIENT_SECRET = env('GOOGLE_CLIENT_SECRET')
+# if 'SENTRY_SSO' in os.environ:
+#     SENTRY_FEATURES['organizations:sso'] = True
+SENTRY_FEATURES['organizations:sso'] = True
+# if 'GOOGLE_CLIENT_ID' in os.environ:
+#     GOOGLE_CLIENT_ID = env('GOOGLE_CLIENT_ID')
+GOOGLE_CLIENT_ID = env('GOOGLE_CLIENT_ID')
+# if 'GOOGLE_CLIENT_SECRET' in os.environ:
+#     GOOGLE_CLIENT_SECRET = env('GOOGLE_CLIENT_SECRET')
+GOOGLE_CLIENT_SECRET = env('GOOGLE_CLIENT_SECRET')
